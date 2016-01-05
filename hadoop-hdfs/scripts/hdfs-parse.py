@@ -40,11 +40,12 @@ def main(argv):
                 print "Unknown metric '%s'" % metric
                 sys.exit(1)
 
-            if type(metrics) is list:
+            values=data[metric]
+            if type(values) is list:
                 # Sum value
-                metrics = [float(x) if "." in x else int(x) for x in metrics]
-                metrics = sum(metrics)/len(metrics)
-            print metrics
+                values = [float(x) if "." in x else int(x) for x in values]
+                values = sum(values)/len(values)
+            print values
     except IOError:
         print "Error, cant read or write to file '%s'" % outputfile
         sys.exit(2)
