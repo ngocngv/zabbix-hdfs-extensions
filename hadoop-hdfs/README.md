@@ -1,5 +1,11 @@
-# zabbix-extensions
-Zabbix extensions and templates
+# Hadoop HDFS Metrics
+Supported metrics in template
 
-* Hadoop HDFS Metrics
+* dfs
+    * WriteBlockOpNumOps
+    * WriteBlockOpAvgTime
+    * ReadBlockOpNumOps
+    * ReadBlockOpAvgTime
+    * BytesWritten
+    * BytesRead
 

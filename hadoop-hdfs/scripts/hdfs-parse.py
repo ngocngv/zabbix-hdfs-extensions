@@ -40,9 +40,9 @@ def main(argv):
                 print "Unknown metric '%s'" % metric
                 sys.exit(1)
 
-            metrics = [ float(x) for x in data[metric]]
             if type(metrics) is list:
                 # Sum value
+                metrics = [float(x) if "." in x else int(x) for x in metrics]
                 metrics = sum(metrics)/len(metrics)
             print metrics
     except IOError:
